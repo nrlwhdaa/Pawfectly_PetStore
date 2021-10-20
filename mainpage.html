@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-image: url('img/pawss.jpg');
+  background-repeat:no repeat;
+}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #D3D3D3;
+}
+
+.topnav a {
+  float: right;
+  color: #111;
+  text-align: center;
+  padding: 18px 19px;
+  text-decoration: none;
+  font-size: 17px;
+}
+div.transbox {
+  width: 1100px;
+  height: 1050px;
+  margin: 10px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 1.0;
+}
+
+video {
+    margin-left: 4%;
+    display: block
+}
+img {
+  float: left;
+}
+.column-quote {
+  width: 55%;
+  height: 0.003px;
+  padding: 8px;
+  padding-left:30px;
+  padding-right: 30px;
+  padding-bottom:100px;
+  margin:auto;
+  border: 20px solid #F0E68C;
+}
+
+.quote {
+  font-size:25px;
+  font-weight:bold;
+  line-height: 0.8;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="contact.html">Contact</a>
+  <a href="#about">About Us</a>
+  <a href="#homet">Home</a>
+</div>
+<center>
+<div style="padding-left:20px">
+  <br><br><h2><i>Pawfectly Pets Store</i></h2>
+  <div class="background">
+  <div class="transbox">
+<p style="float: right; clear: left">
+<video width="420" height="270" controls>
+   <source src="img/pets.mp4" type="video/mp4">
+</video></p>
+<p><b><i>Pawfectly Pet Store is a local pet store where it is located in Kuala Lumpur. In this website there are two types of product 
+that available which is pets food and accessories. We also provide a best service for our customer to save their energy and time
+by doing some delivery method which is COD and Postage. So that, they can had their shopping through our website without walkin to 
+the store.</i></b></p>
+<p>Interesting ?</p>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:15%;">Login</button>
+<p>Don't have an account? <a href="register.html">Register Here</a>.</p>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+	  <center><p><b>Login Form For User</b></p></center>
+      
+      <label for="psw"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+	  <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+	  <button type="button"><a href="gallery.html">Login</a></button>
+	  
+	  <center><p><b>Login Form For Admin</b></p></center>
+      
+      <label for="psw"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+	  <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+	  <button type="button"><a href="adminIndex.html">Login</a></button>
+    </div>
+  </form>
+</div>
+<br><br>
+<hr>
+
+<p><img src="img/main.jpg" alt="Animals" style="width:300px;height:200px;margin-right:15px;"><br>
+<h2><b>About Us </b></h2>
+<li>The best pet store product located in Kuala Lumpur</li>
+<li>You can get high quality of pet foods and accessories</li>
+<li>Easily to keep in touch with us through online</li>
+<li>Customer friendly</li>
+<li>Provide the best service for customers which is COD and postage</li>
+
+<br><br>
+<hr>
+<div class="section-break"> </div>
+<div class="column-quote">
+  <p class="quote"><i>Life Is Better With Pets !</i></p>
+</div>
+<hr>
+
+      <div class="titlepage">
+        <h2>LET'S TALK</h2>
+          <span><i>Have any question or need our opinion about your pet?<br> 
+					Do contact us by fill this form. Thank You!</i></span>
+		<input type="text" id="name" name="name" placeholder="Name">
+		<input type="text" id="email" name="email" placeholder="Email Address">
+		<input type="text" id="no" name="no" placeholder="Comment" rows="4" cols="40">
+		<button type="button">Send</a></button>
+        </div><br>
+		<br><br>
+<footer>
+  <p>Pawfectly Pet Store. All rights reserved<br>
+</footer>
+</body>
+</center>
+</html>

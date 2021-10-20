@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+button {
+  background-color: #77B451;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 20%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/slide1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/slide2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/slide3.jpeg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  <body id="top">
+    <div class="page">
+      <header>
+        <div class="pp-header">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container"><a href="index.html"><img src="images/logo.jpeg" alt="Logo"></a>
+			<a class="navbar-brand" href="index.html">Pawfectly Gallery</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="container">
+	<div class="container pp-section">
+  <div class="row">
+    <div class="col-md-9 col-sm-12 px-0">
+      <h1 class="h5"><i> Welcome to Pawfectly Pet Store Gallery. 
+	  There are some products that you can get there. Do enjoy your time by choosing our best products.</i></h5>
+    </div>
+  </div>
+</div>
+<div class="container px-0 py-4">
+  <div class="pp-category-filter">
+    <div class="row">
+      <div class="col-sm-12"><a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="accessories"> Pet Accessories</a></div>
+    </div>
+  </div>
+</div>
+<div class="container px-0">
+  <div class="pp-gallery">
+    <div class="card-columns">
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/collar.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Collar Pets</div>
+              <p>It is the best design for your cat. You can state your pets name there.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/ball.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Balls</div>
+              <p>This rubber ball is good for your pets to improved dental health and relief anxiety and stress. </p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/bed.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Pets Bed</div>
+              <p>It is a soft bed for your pets. They can be used for napping during the day and sleeping in at night.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/toys.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Sleeping and Playing toys</div>
+              <p>Keeping chewable toys close by will make them feel less alone and less scared when they sleep at night.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/litter.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Litter Box</div>
+              <p>Less litter box buildup makes your cat happy, which makes you happy.It helps a cat stay mentally and physically healthy.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/hammock.jpg" alt="Accessories"/>
+            <figcaption>
+			  <div class="h4">Hammock</div>
+              <p>This is a standing hammock. It offers more room than a crate. </p>
+            </figcaption>
+		  </figure></div>
+			 
+      <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/feeder.png" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Pet Feeder</div>
+              <p>This is a best pet feeder where you can set the drink and food side by side. It will save some space and bowl.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;food&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/condo.jpg" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Cat Condo Tree</div>
+              <p>Provide a great outlet for your cat to receive exercise and relieve stress.</p>
+            </figcaption>
+          </figure></div>		  
+    </div>	  
+	      <div class="page-content">
+        <div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="accessories">Pet Food Product Available</a></div>
+		 </div>
+		</div>
+	  </div>
+	 <div class="container px-0">
+	<div class="pp-gallery">
+	  <div class="card-columns">
+        <div class="card" data-groups="[&quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/wetfood.png" alt="Accessories"/>
+            <figcaption>
+              <div class="h4">Wet Food</div>
+              <p>Whiskas may be a good option if you're looking for a flavorful and meat-based food. 
+			  Read the label closely to make sure you're choosing one of their BHA and BHT-free recipes and 
+			  avoid those that contain caramel color.</p>
+            </figcaption>
+          </figure></div>
+	  
+      <div class="card" data-groups="[&quot;food&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/friskies.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Friskies</div>
+              <p> Formulated to promote healthy weight and control hairballs, with flavors of beef, salmon, cheese and more.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;food&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/happydog.png" alt="Food"/>
+            <figcaption>
+              <div class="h4">Happy Dog</div>
+              <p>COntain a good ingredient such as lamb and rice for adult dogs. Some of it, it also contain some beef and rice for adults dog.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;food&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/felic.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Felix</div>
+              <p>Felix cat foods are completely safe for cats to eat and high in protein which supports strong muscles. </p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;food&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/arden.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Arden Grange</div>
+              <p>Highly palatable. Healthy doesn't have to mean bland, and food is naturally delicious because of its high inclusion of meat or fish and made to fixed formulae.</p>
+            </figcaption>
+          </figure></div>
+		  
+      <div class="card" data-groups="[&quot;food&quot; , &quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/alpo.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Purina Alpo</div>
+              <p>Highly concentrated source of protein. This type of protein is of much lower biological value than nearly any other kind of meat meal. </p>
+            </figcaption>
+			 </figure></div>
+			 
+      <div class="card" data-groups="[&quot;food&quot; , &quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/whiskas.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Whiskas</div>
+			   <p>In this food, you'll find lots and lots of protein in cat foods with meat, eggs, fish, grains, and yeast.</p>
+			</figcaption>
+          </figure></div>
+		  
+	  <div class="card" data-groups="[&quot;food&quot; , &quot;accessories&quot;]">
+          <figure class="pp-effect"><img class="img-fluid" src="images/bonacibo.jpg" alt="Food"/>
+            <figcaption>
+              <div class="h4">Bonacibo</div>
+			   <p>Dental care and hygiene has become one of the main focusses for veterinary and nutritional professionals over the past 20 years.</p>
+			</figcaption>
+          </figure></div>
+  </div>
+<center><button type="button"><a href="product.html">Next</a></button></center>		  
+  </body>
+</html>
